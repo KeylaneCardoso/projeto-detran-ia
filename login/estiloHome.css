@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color:  #E9E9E9;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #FFF2DE, #DCEAFF);
+    background-color: ;
+}
+
+#logos_departamentos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+#Logo_detran{
+    width: 40px;
+    height: 45px;
+}
+
+#Logo_pe{
+    width: 180px;
+    height: 66px;
+}
+
+#icon_perfil{
+    width: 35px;
+    height: 35px;
+}
+
+#faixas{
+    display: flex;
+}
+
+#faixa_azul{
+    width: 70%;
+    height: 10px;
+    background-color: #5F89C8;
+}
+
+#faixa_vermelha{
+    width: 15%;
+    height: 10px;
+    background-color: #BA2F00;
+}
+
+#faixa_laranja{
+    width: 15%;
+    height: 10px;
+    background-color: #FF4D11
+    ;
+}

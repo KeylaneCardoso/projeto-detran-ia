@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* html, body {
+    max-width : 1366px;
+    width: 100%;
+    margin: 0 auto;
+} */ 
+
+body {
+    background-color: #001938;
+    background-image: url('../images/image 4.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* max-width : 1366px;
+    width: 100%;
+    margin: 0 auto; */
+}
+
+#conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    padding: 15%;
+    gap: 6rem;
+    align-items: center;
+}
+
+#logo-principal-SPAT {
+    width: 60%;
+}
+
+#box-login {
+    background-color: #E9E9E9;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    padding-bottom: 1rem;
+    
+}
+
+#titulo-login {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.detalhe {
+    border-bottom: 2px solid #0085FF;
+    border-radius: 5px;
+    width: 30%;
+}
+
+#box-login h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    justify-content: flex-start;
+}
+
+.input-login {
+    width: 85%;
+    border-radius: 0.75rem;
+    border-color: #7979798c;
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#form-login span {
+    font-size: 1rem;
+    color: #0085FF;
+}
+
+#botao-login {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5rem;
+    background-color: #243C59;
+    color: #FFFFFF;
+}
+
+footer h5 {
+    color: #DCEAFF;
+    font-weight: 300;
+}
