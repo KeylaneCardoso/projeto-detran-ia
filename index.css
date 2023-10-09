@@ -16,6 +16,8 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
     align-items: center;
     background-image: linear-gradient(to right, #FFF2DE, #DCEAFF);
     width: 100%;
@@ -83,4 +85,63 @@ footer {
     background-color: #001938;
     height: 10vh;
     width: 100%;
+}
+
+
+form input, select {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    background-color: #F8F8F8;
+    border: 2px solid #E9E9E9;
+    padding: 0.25rem;
+    padding-left: 0.75rem;
+    color:#6a6a6a;
+    margin-top: 5px;
+}
+
+.icon {
+    width: 3.25rem;
+}
+
+.titulo-page {
+    display: flex;
+    padding: 20px;
+    border-radius: 0px 0px 60px 0px;
+    border-bottom-right-radius: 100px;
+    gap: 20px;
+}
+
+#menu-suspenso {
+    display: none;
+    position: absolute;
+    top: 3.5rem; /* Ajuste conforme necessário para a posição do menu */
+    right: 10px; /* Ajuste conforme necessário para a posição do menu */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+}
+
+#menu-suspenso:hover{
+    background-color: #A4BADC;
+}
+
+#menu-suspenso ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+#menu-suspenso ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#menu-suspenso.active {
+    display: block;
+}
+
+#icon_perfil {
+    cursor:pointer;
 }

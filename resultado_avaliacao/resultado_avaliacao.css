@@ -1,0 +1,12 @@
+.container {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 850px;
+    height: 500px;
+    padding-bottom: 1rem;
+}

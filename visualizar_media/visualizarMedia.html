@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="home.html">
+        <a href="../servicos_online/servicos_online.html">
             <img src="../images/Logo_header.png">
         </a>
         
@@ -33,14 +33,52 @@
             <div id="faixa_laranja"></div>
         </div>
     </div>
+
+    <div id="menu-suspenso">
+        <ul>
+            <li><a href="../login/index.html">Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="bread-crumb">
+        <a href="../servicos_online/servicos_online.html">Serviços Online</a>
+        <div>|</div>
+        <a href="">Visualizar Médias de Acidentes</a>
+    </div>
+
     <main>
         <div id="box-visualizar">
             <section>
+                <div class="titulo-page">
+                    <img class="icon" src="../images/analise-de-dados.svg" alt="Icone media">
+                    <div id="titulo">
+                        <h5>VISUALIZAR</h5>
+                        <h1>Médias de Acidentes</h1>
+                    </div>
+                </div>
+                <form id="graficos">
+                    <label for="graficos">Selecione o gráfico que você deseja ver:</label>
+                    <select name="graficos">
+                        <option value="1">Selecione o valor correspondente</option>
+                        <option value="2">Selecione o valor correspondente</option>
+                        <option value="3">Selecione o valor correspondente</option>
+                    </select> 
+                </form>            
+            </section>
+            <section id="box-resultados">
+                <p>Visualize aqui gráficos referentes a médias de acidentes.</p>
+
+                <!--Aqui vão ficar os resultados dos gráficos-->
+
+            </section>
+
+            <!-- <section>
                 <img id="logo-media" src="../images/imagem_media.png">
+                
                 <div id="titulo-selecionar">
                     <h4>Selecione o gráfico que você deseja ver</h4>
                 </div>
-            </section>
+            </section> 
             <section>
             <div id="titulo-visualizar">
                 <h5>Visualize aqui gráficos referentes a médias de acidentes</h5>
@@ -50,11 +88,14 @@
                 <option value="2">Selecione o valor correspondente</option>
                 <option value="3">Selecione o valor correspondente</option>
             </select>              
-            </section>
-            </div> 
+            </section>-->
+
+        </div> 
     </main>
     <footer>
 
     </footer>
+
+    <script type="text/javascript" src="../script.js"></script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/Logo_short.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="avaliar_acidente.css">
+    <link rel="stylesheet" href="../index.css">
+
+    <title>SPAT | Avaliação Acidente</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../servicos_online/servicos_online.html">
+            <img src="../images/Logo_header.png">
+        </a>
+        
+        <div id="logos_departamentos">
+            <a href="https://www.detran.pe.gov.br/" target="_blank">
+                <img id="Logo_detran" src="../images/Logo_detran.png">
+            </a>
+            <a href="https://www.pe.gov.br/" target="_blank">
+                <img id="Logo_pe" src="../images/Logo_pe.png">
+            </a>
+        </div>
+        <img id="icon_perfil" src="../images/icon_perfil.png">
+    </header>
+    <div class="container-faixas">
+        <div id="faixas">
+            <div id="faixa_azul"></div>
+            <div id="faixa_vermelha"></div>
+            <div id="faixa_laranja"></div>
+        </div>
+    </div>
+
+    <div id="menu-suspenso">
+        <ul>
+            <li><a href="../login/index.html">Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="bread-crumb">
+        <a href="../servicos_online/servicos_online.html">Serviços Online</a>
+        <div>|</div>
+        <a href="">Avaliação Acidente</a>
+    </div>
+    <main>
+        <div class="container">
+            <div id="info">
+                <div class="titulo-page">
+                    <img class="icon" src="../images/diagnostico.svg" alt="Icone diagnostico">
+                    <h1>Avaliação Acidente</h1>
+                </div>
+                <p>Preencha os campos e realize a avaliação do acidente.</p>
+            </div>
+            
+            <form action="" method="">
+                <div class="bloco-form">
+                    <label for="ctgHabilitacao">Categoria Habilitação</label><br>
+                    <select id="ctgHabilitacao" name="ctgHabilitacao">
+                        <option value="N">Não Informado</option>
+                        <option value="IN">Inabilitado</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="AB">AB</option>
+                        <option value="AD">AD</option>
+                        <option value="AE">AE</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select><br><br>
+
+                    <p>Turno em que o acidente correu</p>
+                    <input type="radio" id="turno-m" name="turno" value="Matutino">
+	                <label class="turno" for="turno-m">Matutino</label><br>
+	                <input type="radio" id="turno-v" name="turno" value="Vespertino">
+	                <label class="turno" for="sexo-f">Vespertino</label><br>
+                    <input type="radio" id="turno-n" name="turno" value="Noturno">
+	                <label class="turno" for="turno-n">Noturno</label><br><br>
+
+                    <label for="embreagues">O motorista estava embreagado?</label><br>
+                    <select id="embreagues" name="embreagues">
+                        <option value="NI">Não Informado</option>
+                        <option value="S">Sim</option>
+                        <option value="N">Não</option>
+                    </select>   
+                </div>
+                
+                <div class="bloco-form">
+                    <label for="numEnvolvidos">Número de envolvidos</label><br>
+                    <input type="number" id="numEnvolvidos" name="numEnvolvidos"><br><br>
+
+                    <label for="cintoSeg">O motorista estava embreagado?</label><br>
+                    <select id="cintoSeg" name="cintoSeg">
+                        <option value="NI">Não Informado</option>
+                        <option value="S">Sim</option>
+                        <option value="N">Não</option>
+                    </select><br>
+                    
+                    <button type="submit" id="botao-enviar">
+                        VERIFICAR ACIDENTE
+                    </button>
+                    
+                    <!--<input type="submit" id="botao-enviar" value="VERIFICAR ACIDENTE">!-->
+
+                </div>
+            </form>
+            
+           
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+        /*document.getElementById("botao-enviar").onclick = function() {
+            window.location.href = "../resultado_avaliacao/resultado_avaliacao.html";
+        };*/
+
+        document.querySelector("form").onsubmit = function(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+            window.location.href = "../resultado_avaliacao/resultado_avaliacao.html";
+        };
+
+    </script>
+
+    <script type="text/javascript" src="../script.js"></script>
+
+    
+
+</body>
+</html>

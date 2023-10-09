@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <a href="home.html">
+        <a href="../servicos_online/servicos_online.html">
             <img src="../images/Logo_header.png">
         </a>
         
@@ -37,11 +37,18 @@
             <div id="faixa_laranja"></div>
         </div>
     </div>
+
+    <div id="menu-suspenso">
+        <ul>
+            <li><a href="../login/index.html">Sair</a></li>
+        </ul>
+    </div>
+
     <main>
         <div class="container">
             <div class="bloco">
                 <h2>Avaliar Acidente</h2>
-                <button class="img-and-button">
+                <button class="img-and-button" id="botao-iniciarP">
                     <img src="../images/diagnostico.svg" alt="Icone de busca">
                     INICIAR PROCEDIMENTO
                 </button>
@@ -49,7 +56,7 @@
             <hr class="vertical-hr">
             <div class="bloco">
                 <h2>Médias de Acidentes</h2>
-                <button class="img-and-button">
+                <button class="img-and-button" id="botao-verM">
                     <img id="img-analise" src="../images/analise-de-dados.svg" alt="Icone de busca">
                     VISUALIZAR
                 </button>
@@ -59,5 +66,18 @@
     <footer>
 
     </footer>
+
+
+    <script>
+        document.getElementById("botao-iniciarP").onclick = function() {
+            window.location.href = "../avaliar_acidente/avaliar_acidente.html";
+        };
+
+        document.getElementById("botao-verM").onclick = function() {
+            window.location.href = "../visualizar_media/visualizarMedia.html";
+        };
+    </script>
+    <script type="text/javascript" src="../script.js"></script>
+
 </body>
 </html>
