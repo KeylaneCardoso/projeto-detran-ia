@@ -164,5 +164,9 @@ form input, select {
         width: auto;
         height: 15px;
     }
-    
+
+    .bread-crumb{
+        display: none;
+    }
+
 }
