@@ -63,3 +63,81 @@
 #img-analise{
     margin-right: 30px;
 }
+
+@media screen and (max-width: 900px) {
+    .img-and-button img {
+        display: none;
+    }
+
+    .img-and-button {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        height: 60vh;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+    
+    .bloco {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .bloco h2 {
+        margin-bottom: 10px;
+    }
+    
+    .img-and-button {     
+        text-decoration: none; 
+        width: 100%; 
+    }
+
+    
+    .vertical-hr {
+        display: none;
+     }
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        width: 60vw;
+        height: 60vh;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .img-and-button {
+        padding: 20px;
+    }
+
+    .img-and-button, .bloco {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .bloco h2 {
+        margin-bottom: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .bloco, .img-and-button {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .bloco, .img-and-button{
+        font-size: 10px;
+    }
+}
