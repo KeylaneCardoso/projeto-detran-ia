@@ -16,8 +16,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1rem;
     align-items: center;
     background-image: linear-gradient(to right, #FFF2DE, #DCEAFF);
     width: 100%;
@@ -144,4 +143,29 @@ form input, select {
 
 #icon_perfil {
     cursor:pointer;
+}
+
+@media screen and (max-width: 400px){
+    
+    header a img{
+        width: 100%;
+    }
+
+    #icon_perfil{
+        width: 20px;
+    }
+
+    #Logo_header{
+        width: 50px;
+    }
+
+    #Logo_detran{
+        width: auto;
+        height: 13px;
+    }
+
+    main{
+        display: none;
+    }
+
 }
