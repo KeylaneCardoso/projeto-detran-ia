@@ -97,3 +97,21 @@ footer h5 {
     color: #DCEAFF;
     font-weight: 300;
 }
+
+@media screen and (max-width: 1100px){
+    #logo-principal-SPAT {
+        display: none;    
+    }
+
+    #conteudo-principal {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0%;
+        margin-top: 20%;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
