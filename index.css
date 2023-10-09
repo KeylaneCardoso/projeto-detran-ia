@@ -145,7 +145,8 @@ form input, select {
     cursor:pointer;
 }
 
-@media screen and (max-width: 400px){
+
+@media screen and (max-width: 580px){
     
     header a img{
         width: 100%;
@@ -161,11 +162,7 @@ form input, select {
 
     #Logo_detran{
         width: auto;
-        height: 13px;
+        height: 15px;
     }
-
-    main{
-        display: none;
-    }
-
+    
 }
