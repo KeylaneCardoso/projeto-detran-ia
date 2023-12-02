@@ -61,48 +61,119 @@
             
             <form action="" method="">
                 <div class="bloco-form">
-                    <label for="ctgHabilitacao">Categoria Habilitação</label><br>
-                    <select id="ctgHabilitacao" name="ctgHabilitacao">
-                        <option value="N">Não Informado</option>
-                        <option value="IN">Inabilitado</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="AB">AB</option>
-                        <option value="AD">AD</option>
-                        <option value="AE">AE</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
+                    <label for="categoria_habilitacao">Categoria Habilitação</label><br>
+                    <select id="categoria_habilitacao" name="categoria_habilitacao">
+                        <option value="0">Não Informado</option>
+                        <option value="1">Não se Aplica</option>
+                        <option value="2">Inabilitado</option>
+                        <option value="3">A</option>
+                        <option value="4">B</option>
+                        <option value="5">C</option>
+                        <option value="6">AB</option>
+                        <option value="7">AD</option>
+                        <option value="8">AE</option>
+                        <option value="9">D</option>
+                        <option value="10">E</option>
+                        <option value="11">AP</option>
+                        <option value="12">AC</option>
                         <br>
                         <br>
                     </select><br><br>
 
                     <p>Turno em que o acidente correu</p>
-                    <input type="radio" id="turno-m" name="turno" value="Matutino">
+                    <input type="radio" id="turno-m" name="turno" value="0">
 	                <label class="turno" for="turno-m">Matutino</label><br>
-	                <input type="radio" id="turno-v" name="turno" value="Vespertino">
+	                <input type="radio" id="turno-v" name="turno" value="1">
 	                <label class="turno" for="sexo-f">Vespertino</label><br>
-                    <input type="radio" id="turno-n" name="turno" value="Noturno">
+                    <input type="radio" id="turno-n" name="turno" value="2">
 	                <label class="turno" for="turno-n">Noturno</label><br><br>
+
+                    <label for="sexo">Qual o sexo do condutor?</label><br>
+                    <select id="sexo" name="sexo">
+                        <option value="0">Não Informado</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Feminino</option>
+                    </select><br><br>
+
+                    <label for="idade">Qual a idade do condutor?</label><br>
+                    <input type="number" id="idade" name="idade"><br><br>
 
                     <label for="embreagues">O motorista estava embreagado?</label><br>
                     <select id="embreagues" name="embreagues">
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não Informado</option>
+                    </select><br><br>
+                    
+                    <p>O acidente ocorreu por culpa do condutor?</p>
+                    <input type="radio" id="condutor-n" name="condutor" value="0">
+	                <label class="condutor" for="condutor-n">Não</label>
+                    <input type="radio" id="condutor-s" name="condutor" value="1">
+	                <label class="condutor" for="condutor-s">Sim</label><br><br><br>
+                    
+                    <!-- <label for="condutor">O acidente ocorreu por culpa do condutor?</label><br>
+                    <select id="condutor" name="condutor">
                         <option value="NI">Não Informado</option>
                         <option value="S">Sim</option>
                         <option value="N">Não</option>
-                    </select>   
+                    </select> -->
                 </div>
                 
                 <div class="bloco-form">
                     <label for="numEnvolvidos">Número de envolvidos</label><br>
                     <input type="number" id="numEnvolvidos" name="numEnvolvidos"><br><br>
 
-                    <label for="cintoSeg">O motorista estava embreagado?</label><br>
-                    <select id="cintoSeg" name="cintoSeg">
-                        <option value="NI">Não Informado</option>
-                        <option value="S">Sim</option>
-                        <option value="N">Não</option>
-                    </select><br>
+                    <label for="pedestres">Houveram pedestres envolvidos?</label><br>
+                    <select id="pedestres" name="pedestres">
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não Informado</option>
+                    </select><br><br>
+
+                    <label for="passageiros">Houveram passageiros envolvidos?</label><br>
+                    <select id="passageiros" name="passageiros">
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não Informado</option>
+                    </select><br><br>
+
+                    <label for="cinto_seguranca">O motorista estava usando cinto de segurança?</label><br>
+                    <select id="cinto_seguranca" name="cinto_seguranca">
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                    </select><br><br>
+
+                    <label for="especie_veiculo">Qual a espécie do veiculo?</label><br>
+                    <select id="especie_veiculo" name="especie_veiculo">
+                        <option value="0">Bicicleta</option>
+                        <option value="1">Automovél</option>
+                        <option value="2">Ônibus</option>
+                        <option value="3">Motocicleta</option>
+                        <option value="4">Camioneta</option>
+                        <option value="5">Caminhonete</option>
+                        <option value="6">Não Informado</option>
+                        <option value="7">Caminhão</option>
+                        <option value="8">Caminhão-Trator</option>
+                        <option value="9">Microonibus</option>
+                        <option value="10">Motoneta</option>
+                        <option value="11">Reboque e Semi-reboque</option>
+                        <option value="12">Patinete</option>
+                        <option value="13">Kombi</option>
+                        <option value="14">Ciclomotor</option>
+                        <option value="15">Carroca</option>
+                        <option value="16">Trator Misto</option>
+                        <option value="17">Bonde</option>
+                        <option value="18">Carro de Mão</option>
+                        <option value="19">Triciclo</option>
+                        <option value="20">Trator de Rodas</option>
+                    </select><br><br>
+
+                    <label for="desc_severidade">Informe o grau de severidade do acidente:</label><br>
+                    <select id="desc_severidade" name="desc_severidade">
+                        <option value="0">Fatal</option>
+                        <option value="1">Não Fatal</option>
+                        <option value="2">Sem Ferimentos</option>
+                    </select><br><br>
                     
                     <button type="submit" id="botao-enviar">
                         VERIFICAR ACIDENTE
