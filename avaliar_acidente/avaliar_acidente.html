@@ -166,14 +166,14 @@
                         <option value="18">Carro de Mão</option>
                         <option value="19">Triciclo</option>
                         <option value="20">Trator de Rodas</option>
-                    </select><br><br>
+                    </select><br><br><br>
 
-                    <label for="desc_severidade">Informe o grau de severidade do acidente:</label><br>
+                    <!-- <label style="margin-top: 100px;" for="desc_severidade">Informe o grau de severidade do acidente:</label><br>
                     <select id="desc_severidade" name="desc_severidade">
                         <option value="0">Fatal</option>
                         <option value="1">Não Fatal</option>
                         <option value="2">Sem Ferimentos</option>
-                    </select><br><br>
+                    </select><br><br> -->
                     
                     <button type="submit" id="botao-enviar">
                         VERIFICAR ACIDENTE
@@ -193,9 +193,76 @@
         };*/
 
         document.querySelector("form").onsubmit = function(event) {
-            event.preventDefault(); // Evita o envio do formulário padrão
-            window.location.href = "../resultado_avaliacao/resultado_avaliacao.html";
+            event.preventDefault();
+            
+            enviarFormulario()// Evita o envio do formulário padrão
+            // window.location.href = "../resultado_avaliacao/resultado_avaliacao.html";
         };
+
+    </script>
+     <script>
+        function enviarFormulario() {
+            
+            const formulario = document.querySelector("form");
+            const categoriaHabilitacao = document.getElementById("categoria_habilitacao").value;
+            const especieVeiculo = document.getElementById("especie_veiculo").value;
+            const sexo = document.getElementById("sexo").value;
+            const cintoSeguranca = document.getElementById("cinto_seguranca").value;
+            const passageiros = document.getElementById("passageiros").value;
+            const pedestres = document.getElementById("pedestres").value;
+            const numEnvolvidos = document.getElementById("numEnvolvidos").value;
+            const embreagues = document.getElementById("embreagues").value;
+            const idade = document.getElementById("idade").value;
+            const radiosTurno = document.getElementsByName('turno');
+            const radiosCondutor = document.getElementsByName('condutor');
+
+            let turno;
+            for (var i = 0; i < radiosTurno.length; i++) {
+                if (radiosTurno[i].checked) {
+                    turno = radiosTurno[i].value;
+                    localStorage.setItem('turno', turno);
+                    break;  // Se um está selecionado, não precisa verificar os outros
+                }
+            }
+
+            let condutor;
+            for (var i = 0; i < radiosCondutor.length; i++) {
+                if (radiosCondutor[i].checked) {
+                    condutor = radiosCondutor[i].value;
+                    localStorage.setItem('condutor', condutor);
+                    break;  
+                }
+            }
+
+            
+            const corpoRequisicao = JSON.stringify({
+                Nº_envolvido: numEnvolvidos,
+                condutor: localStorage.getItem('condutor'),
+                sexo: sexo,
+                cinto_seguranca: cintoSeguranca,
+                Embreagues: embreagues,
+                Idade: idade,
+                categoria_habilitacao: categoriaHabilitacao,
+                especie_veiculo: especieVeiculo,
+                pedestre: pedestres,
+                passageiro: passageiros,
+                turno: localStorage.getItem('turno')
+            });
+
+            fetch("http://localhost:5000/prever", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: corpoRequisicao
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Resposta da API:', data);
+            })
+            .catch(error => console.error('Erro ao enviar requisição:', error));
+        }
 
     </script>
 
