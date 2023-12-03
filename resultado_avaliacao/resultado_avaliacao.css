@@ -1,12 +1,26 @@
 .container {
     background-color: #FFFFFF;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
     font-family: 'Poppins', sans-serif;
     
     border-radius: 0.5rem;
     width: 100%;
     max-width: 850px;
-    height: 500px;
+    height: 400px;
     padding-bottom: 1rem;
+    padding: 2em;
+}
+
+#img_diagnostico {
+    background-color: #00469B;
+    border-radius: 10px;
+    padding: 0.2em;
+}
+
+#destaque {
+    color: #00469B;
+    font-weight: 600;
 }
