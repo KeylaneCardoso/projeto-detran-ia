@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
     border-radius: 0.5rem;
     width: 100%;
-    max-width: 850px;
+    max-width: 900px;
     height: auto;
     margin-top: 15%;
     padding-bottom: 1rem;
@@ -46,9 +46,16 @@ form {
     color: #8e8d8d;
 }
 
+#container_botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 #botao-enviar {
-    background-color: #BA2F00;
+    display: block;
+    background-color: #00469B;
     color: #FFFFFF;
     border: none;
     padding: 1rem;
@@ -57,13 +64,23 @@ form {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+
+    width: 50%;
 }
 
 
 #botao-enviar:hover {
-    background-color: #FF4D11;
+    background-color: #0a5bbe;
 }
 
+#erro {
+    color: #BA2F00;
+}
+
+#erro_destaque {
+    font-weight: 600;
+    color: #BA2F00;
+}
 
 @media screen and (max-width: 850px){
 

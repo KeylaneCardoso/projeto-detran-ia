@@ -174,11 +174,13 @@
                         <option value="1">Não Fatal</option>
                         <option value="2">Sem Ferimentos</option>
                     </select><br><br> -->
-                    
-                    <span id="erro"></span>
-                    <button type="submit" id="botao-enviar">
-                        VERIFICAR ACIDENTE
-                    </button>
+                    <div id="container_botao">
+                        <span id="erro"></span>
+                        <span id="erro_destaque"></span>
+                        <button type="submit" id="botao-enviar">
+                            VERIFICAR ACIDENTE
+                        </button>
+                    </div>
                     
                     <!--<input type="submit" id="botao-enviar" value="VERIFICAR ACIDENTE">!-->
 
@@ -198,15 +200,19 @@
             const numEnvolvidos = document.getElementById('numEnvolvidos');
             const idade = document.getElementById('idade');
             const erro = document.getElementById('erro');
+            const erroDestaque = document.getElementById('erro_destaque');
             
             if (numEnvolvidos.value == "") {
-                erro.innerText = "É necessário preencher o campo 'Número de envolvidos'."
+                erro.innerText = "É necessário preencher o campo: "
+                erroDestaque.innerText = "'Número de envolvidos'."
                 return;
             } else if (idade.value == "") {
-                erro.innerText = "É necessário preencher o campo 'Qual a idade do condutor?'.";
+                erro.innerText = "É necessário preencher o campo ";
+                erroDestaque.innerText = "'Qual a idade do condutor?'."
                 return;
             } else {
                 erro.innerText = "";
+                erroDestaque.innerText = "";
             }
 
 
