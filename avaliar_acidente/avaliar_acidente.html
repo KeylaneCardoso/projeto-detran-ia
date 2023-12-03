@@ -237,13 +237,7 @@
             const idade = document.getElementById("idade").value;
             const radiosTurno = document.getElementsByName('turno');
             const radiosCondutor = document.getElementsByName('condutor');
-
-            if (numEnvolvidos == "") {
-                return Promise.reject(4)
-            } else if (idade == "") {
-                return Promise.reject(5)
-            }
-            console.log(categoriaHabilitacao)
+            
             return new Promise((resolve, reject) => {
 
     
@@ -296,7 +290,7 @@
                 })
                 .catch(error => {
                 console.error('Erro ao enviar requisição:', error);
-                reject(3);
+                reject(4);
             });
             })
             
